@@ -15,22 +15,37 @@
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background: linear-gradient(135deg, #f0f4ff, #e2e8f0);
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        padding: 40px 20px;
         text-align: center;
-        padding: 20px;
+      }
+
+      img.profile {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 3px solid #2b6cb0;
       }
 
       h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         color: #2d3748;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
-      a {
+      p.intro {
+        font-size: 1.1rem;
+        color: #4a5568;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+      }
+
+      a.button {
         display: inline-block;
         padding: 12px 24px;
         font-size: 1rem;
@@ -39,10 +54,45 @@
         text-decoration: none;
         border-radius: 8px;
         transition: background-color 0.3s ease;
+        margin-top: 1rem;
       }
 
-      a:hover {
+      a.button:hover {
         background-color: #2c5282;
+      }
+
+      section {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 800px;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: #2d3748;
+        margin-bottom: 1rem;
+      }
+
+      ul.skills,
+      ul.projects {
+        list-style: none;
+        padding: 0;
+      }
+
+      ul.skills li,
+      ul.projects li {
+        background-color: #edf2f7;
+        margin: 8px 0;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 1rem;
+        color: #2d3748;
+        transition: transform 0.2s;
+      }
+
+      ul.skills li:hover,
+      ul.projects li:hover {
+        transform: scale(1.03);
       }
 
       footer {
@@ -53,8 +103,46 @@
     </style>
   </head>
   <body>
+    <img src="your-photo.jpg" alt="Niyam Rai" class="profile" />
+
     <h2>Hello, I am <strong>Niyam Rai</strong> 👋</h2>
-    <a href="about.html">Go to About Me</a>
+    <p class="intro">
+      I'm a passionate developer who loves building web apps and learning new
+      technologies. I enjoy solving real-world problems with code and sharing my
+      knowledge.
+    </p>
+
+    <a href="about.html" class="button">Go to About Me</a>
+
+    <section>
+      <h3>My Skills</h3>
+      <ul class="skills">
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>React, Next.js</li>
+        <li>Tailwind CSS, Bootstrap</li>
+        <li>Git & GitHub</li>
+        <li>Java, Kotlin, Android</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Projects</h3>
+      <ul class="projects">
+        <li>
+          <strong>Portfolio Website:</strong> Built with HTML, CSS, and
+          JavaScript.
+        </li>
+        <li>
+          <strong>Cab Booking App:</strong> Android app using Kotlin and
+          Firebase.
+        </li>
+        <li>
+          <strong>ERP Dashboard:</strong> Built with React and Tailwind CSS.
+        </li>
+      </ul>
+    </section>
+
+    <a href="mailto:niyam@example.com" class="button">Contact Me</a>
 
     <footer>
       <p>&copy; 2025 Niyam Rai | All rights reserved</p>
